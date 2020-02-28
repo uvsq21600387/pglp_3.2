@@ -2,7 +2,7 @@ package Mathieu_De_Jesus.pglp_3_2;
 
 public abstract class Salarie {
 	
-	protected final int base;
+	protected final double base;
 	
 	protected Salarie(int base) {
 		this.base = base;
