@@ -6,10 +6,10 @@ public class Employe extends Salarie {
 	private final int anneeDebut;
 	private int anneeCourante;
 	
-	public Employe(int anneeDebut) {
+	public Employe(int anneeDebut, int anneeCourante) {
 		this.base = 1500;
 		this.anneeDebut = anneeDebut;
-		setAnneeCourante(2020);
+		setAnneeCourante(anneeCourante);
 	}
 	
 	public void setAnneeCourante(int annee) {
