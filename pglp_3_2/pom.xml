@@ -28,6 +28,16 @@
   
   <reporting>
     <plugins>
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-site-plugin</artifactId>
+		<version>3.3</version>
+	  </plugin>
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-project-info-reports-plugin</artifactId>
+		<version>2.7</version>
+	  </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
@@ -35,7 +45,6 @@
         <configuration>
         </configuration>
       </plugin>
-      
       <plugin>
 	    <groupId>org.apache.maven.plugins</groupId>
 	    <artifactId>maven-checkstyle-plugin</artifactId>
@@ -48,52 +57,11 @@
 		  </reportSet>
 	    </reportSets>
 	  </plugin>
-        
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <version>3.0.6-SNAPSHOT</version>
-      </plugin>
+		<groupId>com.github.spotbugs</groupId>
+		<artifactId>spotbugs-maven-plugin</artifactId>
+		<version>3.1.8</version>
+	  </plugin>
     </plugins>
   </reporting>
-  
-  <build>
-    <plugins>
-	  <plugin>
-	    <artifactId>maven-assembly-plugin</artifactId>
-		  <version>3.1.0</version>
-		  <configuration>
-		    <descriptorRefs>
-			  <descriptorRef>jar-with-dependencies</descriptorRef>
-		    </descriptorRefs>
-		    <archive>
-			  <manifest>
-			    <mainClass>${main-class}</mainClass>
-			  </manifest>
-		    </archive>
-		  </configuration>
-		  <executions>
-		    <execution>
-			  <id>make-assembly</id>
-			  <phase>package</phase>
-			  <goals>
-			    <goal>single</goal>
-			  </goals>
-		    </execution>
-		  </executions>
-	    </plugin>
-	    <plugin>
-		  <groupId>org.apache.maven.plugins</groupId>
-		  <artifactId>maven-jar-plugin</artifactId>
-		  <version>3.0.2</version>
-		  <configuration>
-			<archive>
-			  <manifest>
-				<mainClass>${main-class}</mainClass>
-			  </manifest>
-			</archive>
-		  </configuration>
-        </plugin>
-	  </plugins>
-    </build>
 </project>
