@@ -5,7 +5,7 @@ public class Vendeur extends Salarie {
 	private int commission;
 	
 	public Vendeur(int commission) {
-		super(2000);
+		super(1500);
 		this.commission = commission;
 	}
 	
