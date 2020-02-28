@@ -5,14 +5,15 @@ public class Employe extends Salarie {
 	private final int anneeDebut;
 	private int anneeCourante;
 	
-	public Employe(int anneeDebut, int anneeCourante) {
+	public Employe(int anneeDebut, int anneeCourante) throws Exception {
 		super(1500);
 		this.anneeDebut = anneeDebut;
 		setAnneeCourante(anneeCourante);
 	}
 	
-	public void setAnneeCourante(int annee) {
+	public void setAnneeCourante(int annee) throws Exception {
 		anneeCourante = annee;
+		if(anneeCourante < anneeDebut) throw new Exception();
 	}
 
 	@Override
