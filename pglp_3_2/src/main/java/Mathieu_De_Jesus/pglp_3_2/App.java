@@ -2,12 +2,19 @@ package Mathieu_De_Jesus.pglp_3_2;
 
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+public final class App {
+	/**
+	 * constructeur de la classe App.
+	 */
+	private App() {
+	}
+	/**
+	 * début du programme.
+	 * @param args arguments donnés au démarrage de l'application
+	 */
+    public static void main(final String[] args) {
+        System.out.println("Hello World!");
     }
 }
+
